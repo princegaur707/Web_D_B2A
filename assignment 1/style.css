@@ -1,0 +1,31 @@
+#outerframe
+{
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 200px;
+
+}
+#innerform
+{
+    background-color: rgb(152, 182, 104);
+    width: 380px;
+    height: 470px;
+    margin: auto;
+    margin-top: 10px;
+
+}
+.one
+{
+    padding: 2px 10px;
+}
+.two
+{
+    background-color: lightgreen;
+    padding: 2px 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 3px;
+}

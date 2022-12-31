@@ -1,1 +1,36 @@
 /* 1) backgrond properties */
+
+.one{
+    height: 600px;
+    width: 1000px;
+    background-color: aqua;
+    background-image: url('resources/flower.jpg');
+    background-repeat: no-repeat ;/* repeat-x for allowing to repeating in x axis similarly repeat-y */
+    background-position: bottom right;
+    background: blue url('resources/flower.jpg') no-repeat top right;
+    background-position: center center ;
+    /* (center center) first one for vertical second one for horizontal */
+}
+/* we can notice the picture is repeated multiple times it means box size is bigger than
+the size of image the image will start repeating  */
+
+/* 2) Borders */
+
+.two{
+    width: 200px;
+    height: 200px;
+    background-color: bisque;
+    border-width: 5px;
+    border-style: solid;
+    border-color: red;
+    border: 10px solid green;
+    border-right-style: dotted;
+    border-radius: 20px; 
+    /* border-radius: 50%; */     /* This will become full circle */
+    margin-top: 50px;    /* margin */
+    margin-left: 100px;
+    margin: 200 100;    /* margin: top left */
+    margin: auto     /* left margin = right margin */
+    
+}
+ 
