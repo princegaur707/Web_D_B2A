@@ -1,9 +1,0 @@
-/* 1) Making Variables */
-:root{    /* root is used to make variable */
-    --varone: blue;     /* variable name then property */
-}
-.one{
-    height: 200px;
-    width: 200px;
-    background-color: var(--varone);
-}

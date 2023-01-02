@@ -1,0 +1,62 @@
+/* 1) Making Variables */
+:root{    /* root is used to make variable */
+    --varone: blue;     /* variable name then property */
+}
+.one{
+    height: 500px;
+    width: 1900px;
+    background-color: var(--varone);
+/* This leads to the distortion in size when the screen size changes(which is very common
+today as we see websites on various devices) so, to overcome this issue we use ranges
+for the different devices */
+}
+@media(min-width: 640px)
+/* @media (min-width: 640px) and (max-width: 767px) If need code to be merged */
+/* This condition changes width if screen width in more than 640px.
+640px is generally taken while sometimes it can be 480px*/
+{
+    .one
+    {
+        width:400px;
+    }
+}
+
+@media (min-width: 768px)/* For the TAB screens and this values always remain same */
+{
+    .one
+    {
+        width:600px;
+    }
+}
+@media (min-width:1024px)/* For Laptop's screen */
+{
+    .one
+    {
+        width:800px;
+    }
+}
+@media (min-width:1200px)
+{
+    .one
+    {
+        width: 1000px;
+    }
+}
+.two
+{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+.three
+{
+    width: 200px;
+    height: 300px;
+    background-color:green;
+}
+.four
+{
+    width: 200px;
+    height: 400px;
+    background-color:blue;
+}
