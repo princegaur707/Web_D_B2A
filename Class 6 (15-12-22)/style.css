@@ -1,6 +1,6 @@
 /* 1) Making Variables */
 :root{    /* root is used to make variable */
-    --varone: blue;     /* variable name then property */
+    --varone: rgb(13, 13, 29);     /* variable name then property */
 }
 .one{
     height: 500px;
@@ -47,16 +47,29 @@ for the different devices */
     width: 200px;
     height: 200px;
     background-color: red;
+    float:left;
+    /* element with floating value is assumed by next element like it is not present */
 }
 .three
 {
     width: 200px;
     height: 300px;
     background-color:green;
+    float:right;
+    /* This box is assuming like red box do not exist when we moved it right we can see it 
+    occupied red box portion */
 }
 .four
 {
     width: 200px;
     height: 400px;
     background-color:blue;
+    /* blue box will take 200px of red one also */
+    /* clear: left;  */
+    /* If we apply clear left it will start taking value from leaving area of red box completely */
+    clear: right;
+    /* if we apply clear right it will start taking value from leaving area of green one also */
+    float:left;
+    /* if we do this float left without any clear then it will come to the side of red 
+    It will not overlap property consider this like div */
 }
