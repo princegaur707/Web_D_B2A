@@ -1,0 +1,35 @@
+.one{
+    background-color: blue;
+    width: 200px;
+    height:200px;
+    margin-bottom: 100px;
+}
+.two{
+    background-color: rgb(158, 24, 24);
+    width:200px;
+    height:200px;
+    margin-top: 200px;
+}
+.three{
+    background-color: rgb(35, 110, 175);
+    display: inline-block;
+    width:200px;
+    height:200px;
+    margin-right: 100px;
+}
+.four{
+    background-color: rgb(168, 112, 39);
+    display:inline-block;
+    width:200px;
+    height:200px;
+    margin-left: 200px;
+}
+.five{
+    background-color: grey;
+    height:200px;
+    width:200px;
+    padding: 10px;
+    overflow-y:auto;
+    /* auto will add scroll when required while scroll will always add scroll */
+    /* scroll will give scroll bar in both x and y direction if not mentioned */
+}
