@@ -1,0 +1,21 @@
+p{
+    font-size: 18px;
+    /* font-size: 2cm; */
+    /* font-size: 2em;    two times of what we have specified */
+    /* font-size: 3rem;   two times of browsers' specified */
+    /* Above are gen. used in smaking website responsive */
+    /* font-size: 10vw%;  */
+    /* vw: entire viewable width
+    10%vw: 10 percent of viewable width */
+    /* font-size: 10vh%; */
+    /* vh: entire viewable height */
+    /* 10%vh: 10 percent of viewable height */   
+}
+p{
+    width:200px;
+    height:200px;
+    background-color: blue;
+}
+.one{
+    background-color: red;
+}

@@ -41,12 +41,12 @@
 }
 .six{
     background-color: red;
-    height: 200px;
+    height: 300px;
     width: 300px;
     position:relative;
     top: 100px;
     left:100px;
-    margin-left:100px; 
+    margin-left:100px;    /* margins will be considered by top and all */
     z-index:3;
 }
 .seven{
@@ -78,6 +78,7 @@ relative */
     /* nearest parent class six red box */
     /* when absolute it will not be able to find any ancestor with relative position it will consider
     base position(will take from <html lang="en") as relative */
+    /* Here absolute in not working because when absolute is the child of that and we set z position it will be reflected in both it means no effect */
 } 
 .form{
     width: 700px;

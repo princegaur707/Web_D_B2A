@@ -65,9 +65,12 @@ for the different devices */
     height: 400px;
     background-color:blue;
     /* blue box will take 200px of red one also */
-    /* clear: left;  */
-    /* If we apply clear left it will start taking value from leaving area of red box completely */
-    clear: right;
+    clear: left; 
+    /* properties: clear: left; right; both; default-none */
+    /* clear: "position" will make sure that no other float element come at the mentioned
+    position of this element. so, If we apply clear left it will make sure red box should not
+    be at left so blue box will start taking value from next line*/
+    /* clear: right; */
     /* if we apply clear right it will start taking value from leaving area of green one also */
     float:left;
     /* if we do this float left without any clear then it will come to the side of red 

@@ -1,124 +1,68 @@
-.one{
-    background-color: blue;
-    width: 200px;
-    height:200px;
-    margin-bottom: 100px;
+/*your CSS code here*/
+.heading{
+    font-size: 35px;
+    background-color: bisque;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #2F5A78;
 }
-.two{
-    background-color: rgb(158, 24, 24);
-    width:200px;
-    height:200px;
-    margin-top: 200px;
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.three{
-    background-color: rgb(35, 110, 175);
-    display: inline-block;
-    width:200px;
-    height:200px;
-    margin-right: 100px;
-    /* visibility:hidden;  */
-    /* visibility makes the box invisible it will occupy the space but just not visible */
-    /* display: none;
-    display makes element invisible as well as frees the space too occupied by it */
+.prof{
+    font-size: 16px;
+    font-weight: lighter;
 }
-.four{
-    background-color: rgb(168, 112, 39);
-    display:inline-block;
-    width:200px;
-    height:200px;
-    margin-left: 200px;
+.contactinfo
+{
+    display:flex;
+    font-size: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: #eeeeee;
+    justify-content: space-between;
 }
-.five{
-    background-color: grey;
-    height:200px;
-    width:200px;
-    padding: 10px;
-    overflow-y:auto;
-    border: 5px solid red;
-    /* overflow */
-    /* auto will add scroll when required while scroll will always add scroll */
-    /* scroll will give scroll bar in both x and y direction if not mentioned */
+.subheading
+{
+    font-size: 15px;
+    font-weight: bolder;
 }
-.six{
-    background-color: red;
-    height: 200px;
-    width: 300px;
-    position:relative;
-    top: 100px;
-    left:100px;
-    margin-left:100px; 
-    z-index:3;
+.intro{
+    background-color: #2F5A78;
+    color: white;
+    padding-left: 16px;
+    padding-bottom: 8px;
+    margin-bottom: 4px;
 }
-.seven{
-    background-color: blue;
-    width:200px;
-    height:200px;
+.subheading{
+    font-size: 20px;
+    font-weight: bolder;
+    color:#2F5A78;
 }
-/* Blue box will completely ignore the margins and position values of red box due to position
-relative */
-.eight{
-    width: 200px;
-    height:200px;
-    background-color: rgb(200, 13, 247);
-    position:fixed;
-    right:0px;
-    top:0px;
-    /* fixed position fixes this box position on top right and will not move while scrolling */
+.icon{
+    color: #2F5A78;
 }
-.nine{
-    width:100px;
-    height:100px;
-    background-color:rgb(8, 7, 4);
-    position: absolute;
-    z-index:2;
-    /* top:0px;
-    right:0px; */
-    /* absolute takes its position from the nearet ancestor having position relative so,
-    this one will be black box on red box */
-    /* nearest parent class six red box */
-    /* when absolute it will not be able to find any ancestor with relative position it will consider
-    base position(will take from <html lang="en") as relative */
-} 
-.form{
-    width: 700px;
-    margin: auto;
-    margin-top: 200px;  
+.date
+{
+    font-size: 16px;
+    color: #78522f;
+    font-weight: bold;
+}
+.skills ul li{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left:-15px;
     
 }
-/* input selectors */
-input[type=text]{
-    width:100%;
-    padding: 5px; 
-    margin:10px 0px;/*first top(vertical) left(horizontal)*/
-}
-textarea{
-    width:100%;
-    resize: none;/*text area will not be movable*/ 
-}
-input[type=tel]{
-    width:100%;
-}
-input[type=tel]:focus{
-    background-color: blue;
-}
-input[type=submit]{
-    margin:auto;
-    margin-top:10px;
-}
-.ten{
-    background-color: green;
-    width:200px;
-    height:200px;
+.skills ul li .skill_prog{
+    width:60%;
+    height:5px;
     position:relative;
-    top:100px;
-    border: 10px solid black;
-    z-index: 30;
 }
-.eleven{
-    background-color: blue;
-    width:200px;
-    height:200px;
-    position: absolute;
-    border: 10px solid red;
-    z-index: 20;
+.skills ul li .skill_prog span{
+    position:absolute;
+    height:100%;
+    background-color: #2F5A78;
+    padding-right:50px;
 }
