@@ -40,4 +40,33 @@ header{
     font-size:1rem;
     border-radius:5px;
     padding: 4px 8px;
+    display: none; /* as we don't want to see this icon if screen size is sufficient  */
+}
+.home{
+    display: flex;
+    align-items: center;
+    background-image: url('resources/img5.jpg');
+    max-height:600px;
+}
+.info{
+   max-width: 49%;
+   padding:10rem 9%;
+}
+h2{
+    font-size:2rem;
+    padding:2rem 0;
+    /* padding given top also implies bottom directly */
+}
+@media(max-width:991px){
+    
+}
+@media(max-width:768px){
+    .fa-bars{
+        display:block;
+        /* we will use js for bring all the others things under navbar  */
+        /* for now we are not displaying them */
+    }
+    .navbar{
+        display:none;
+    }
 }
