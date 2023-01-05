@@ -1,0 +1,43 @@
+*{
+    font-size:20px;
+    margin:0;/* By default some margin is always there so we generally remove that */
+    padding:0;
+    box-sizing: border-box;/* this box-sizing helps in fixing 
+    the width so that all padding are included in that width only  */
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+    /* while scrolling down the website how to move on */
+}
+/* Do till in every website  */
+ul{
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+}
+li{
+    padding: 0px 2rem;   
+            /* top left  */
+}
+header{
+    position:fixed; /* we don't want our navbar do change on hover or anything else  */
+    top:0px;left:0px;right:0px;    /* to make it attach to top  */
+    display: flex;    /* As we needed to bring all these in one line  */
+    /* align-items: center; */
+    justify-content:space-between;
+    background-color: rgb(201, 163, 113);
+    padding:1rem 10%;
+}
+.btn{
+    border:none;
+    background-color: rgb(242,109,109);
+    padding: 5px 5px;
+}
+.fa-bars{
+    border:1px solid black;
+    font-size:1rem;
+    border-radius:5px;
+    padding: 4px 8px;
+}
