@@ -10,7 +10,7 @@ html{
     scroll-behavior: smooth;
     /* while scrolling down the website how to move on */
 }
-/* Do till in every website  */
+/* Do till this in every website  */
 ul{
     list-style-type: none;
 }
@@ -19,7 +19,7 @@ li{
 }
 li{
     padding: 0px 2rem;   
-            /* top left  */
+          /* top left  */
 }
 header{
     position:fixed; /* we don't want our navbar do change on hover or anything else  */
