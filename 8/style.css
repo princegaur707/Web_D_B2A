@@ -22,7 +22,7 @@ li{
           /* top left  */
 }
 header{
-    position:fixed; /* we don't want our navbar do change on hover or anything else  */
+    position:fixed; /* we don't want our navbar to change on hover or anything else  */
     top:0px;left:0px;right:0px;    /* to make it attach to top  */
     display: flex;    /* As we needed to bring all these in one line  */
     /* align-items: center; */
@@ -56,6 +56,10 @@ h2{
     font-size:2rem;
     padding:2rem 0;
     /* padding given top also implies bottom directly */
+}
+.desc{
+    padding:2rem;
+    
 }
 @media(max-width:991px){
     
