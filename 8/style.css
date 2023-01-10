@@ -20,8 +20,7 @@ li{
     display: inline-block;
 }
 li{
-    padding: 0px 2rem;   
-          /* top left  */
+    padding: 0px 2rem;    /* top left  */
 }
 header{
     position:fixed; /* we don't  want our navbar to change on scrolling or anything else  */
@@ -36,14 +35,16 @@ a{
     color:black;
 }
 .btn{
-    border:none;
-    background-color: rgb(242,109,109);
+    border-color: red;
+    border-radius: 7px;
+    background-color: red;
     padding: 5px 5px;
-    transition-property: background-color;
+    transition-property: background-color, border-color;
     transition-duration: 2s;
     transition-timing-function: linear;
 }
 .btn:hover{
+    border-color:rgb(165, 47, 47);
     background-color: rgb(165, 47, 47);
 }
 .fa-bars{
@@ -95,7 +96,7 @@ h2{
     border-radius: 50%;
     margin-top:20px;;
 }
-.about{
+#about{
     display: flex;
     text-align: center;
 }
@@ -138,7 +139,7 @@ footer{
     text-align: center;
 }
 @media(max-width:920px){
-    .about{
+    #aboutsection{
         display: block;
     }
 }
