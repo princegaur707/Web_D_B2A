@@ -338,7 +338,7 @@ function myFunction(a,b){
   
   arrr.map(function(element,index){
     console.log(index,element);
-  })
+  })//maps calls a function once for each element in array
   
   arrr.map(myFunction1)
   function myFunction1(item,index){
@@ -356,7 +356,8 @@ function myFunction(a,b){
   
   arr10=[1,2,3,4,5]
   
-  ar11= arr10.map((item)=> item*item)
+  ar11= arr10.map(item=> item*item)//for single parameter even parentheses 
+  //can be removed
   console.log(ar11);
   
   arr10.forEach((item)=>console.log(item*item));
