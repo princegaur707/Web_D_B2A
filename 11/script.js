@@ -240,4 +240,69 @@ document.body.addEventListener('click',(event)=>{
     console.log("Hello2");
 })
 
-//Loading unloading-when page starts loading(content starts showing)
+//Loading unloading->when page starts loading(content starts showing)
+
+addEventListener('load', ()=>{
+    console.log('This page is fully loaded now')
+})
+
+//mouseenter and mouseover: equivalent to hovering
+//mouseleave and mouseout: When we move our cursor after hovering
+
+btn1.addEventListener('mousedown', ()=>{
+    console.log('You are going to click me!')
+})
+
+btn1.addEventListener('mouseup', ()=>{
+    console.log('click processing!')
+})
+
+btn1.addEventListener('click', ()=>{
+    console.log('I am clicked!')
+})
+
+//{keydown -> keyup -> keypress}
+document.body.addEventListener('keydown',(event)=>{
+    console.log('key Pressed')
+    console.log(event)
+})
+window.addEventListener('scroll', ()=>{
+    console.log("I am scrolling")
+})
+//CallBack Functions
+
+var array1 =[1,2,3,4,5,6,7,8,9,10]//sort out even number
+function checker(array1,callback){
+    var array2=[]
+    for(var i of array1){
+        if(callback(i)){
+            array2.push(i);
+        }
+    }
+    return array2;
+}
+var result = checker(array1, (i)=>{
+    return(i%2==0);
+})
+console.log(result);
+
+//SetTimeout and SetInterval\
+
+//This executes function once
+setTimeout(()=>{
+    console.log('Print ME after some delay')
+},4000)//Will be printed after 4second
+
+//This executes function repeatedly
+let runningClock=setInterval(runclock,1000)
+//           function,delay
+var timeclock = document.getElementById('time')
+function runclock(){
+    const d = new Date();   
+    timeclock.innerHTML=d.toLocaleTimeString();
+    //the new Date function is being called after every second and updating time
+}
+var stopTime = document.getElementById('tostop')
+stopTime.addEventListener('click',()=>{
+    clearInterval(runningClock);
+})
