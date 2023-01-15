@@ -190,10 +190,10 @@ var style=getComputedStyle(ele27);//this will tell every styling
 console.log(style);
 
 //Event Handling -----------Important
-//Event->any action in web browser like clicking on button, scroll
+//Event->any action in web browser like clicking on button, scroll etc
 
 // mouseEvents = {mouseup, mousedown, click, doubleclick}
-//mousedown => time till button clicked but not released)
+//mousedown => when button is clicked but not released
 //mouseup => button released
 //mouseup + mousedown => click
 //same steps repeated => double click
@@ -209,6 +209,7 @@ let btn = document.getElementById('btn');
 // });
 
 btn.addEventListener('click',(event)=>{
+    //event is given by browser automatically whenever any action happens
     console.log(event);
     alert('Hello')
 });
@@ -217,16 +218,18 @@ btn.addEventListener('click',(event)=>{
 let anch = document.getElementById('google')
 anch.addEventListener('click',(event)=>{
     console.log(event);
-    event.preventDefault();
+    event.preventDefault();//blocks default functionality, we do this so 
+    //that we can make it work task of our choice
 })
 
 //backtick
 
 var a21=22;
-console.log(`The value of a is ${a21}:`)//this method can print without appending
-//string dynamically updated value displayed
-
-//whenever any Eventlistener is applied it will work no  matter if there is any
+console.log(`The value of a is ${a21} inserted b/w strings`)
+//this method can print without appending string dynamically updated value displayed
+//backtick is even faster than those both and use in cases of preventing using 
+//backspace for using quotes second multilple line printing.
+//whenever any Eventlistener is applied it will work no matter if there is any
 //other Event Listener is applied on it.
 //To stop this event.propogation is used
 
@@ -291,18 +294,23 @@ console.log(result);
 //This executes function once
 setTimeout(()=>{
     console.log('Print ME after some delay')
-},4000)//Will be printed after 4second
+},4000)//Will be printed after 4seconds
 
 //This executes function repeatedly
-let runningClock=setInterval(runclock,1000)
-//           function,delay
+//                           function,delay
+let runningClock=setInterval(runclock,1000)//always we have to get function 
+//returned to pass on the stop time like functions
+
 var timeclock = document.getElementById('time')
 function runclock(){
     const d = new Date();   
-    timeclock.innerHTML=d.toLocaleTimeString();
+    timeclock.innerHTML=d.toLocaleTimeString();//convert time to string
     //the new Date function is being called after every second and updating time
 }
 var stopTime = document.getElementById('tostop')
 stopTime.addEventListener('click',()=>{
     clearInterval(runningClock);
-})
+}) 
+//eval : used for evaluation
+console.log('2+2');
+console.log(eval('2+2'));//useful function for mathematical expressions
