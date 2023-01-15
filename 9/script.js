@@ -173,6 +173,7 @@ var d = a.length;
 console.log(d);
 
 var e =a.slice(-6, -2);//last(-2) entry is not included
+//if flow is Left to Right in slice it will give answers
 console.log(e);
 console.log(a.substring(-6,5));
 //substring do not entertain negative values, they are considered as 0.
