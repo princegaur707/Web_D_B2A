@@ -1,4 +1,4 @@
-const arr = ["abc", "def", ];
+const arr = [ ];
 const listEI = document.getElementsByClassName('list')[0];
 console.log(listEI);
 const submitinputE1= document.getElementById('submitinput')
@@ -10,6 +10,7 @@ const refreshList = function(){
         const toDoItem = document.createElement('li');
         toDoItem.setAttribute('class',"list-item")
         toDoItem.innerText=arr[i];
+        toDoItem.innerHTML +='<span class="deleteItem">&#10060;</span>'//adding cross sign
         listEI.insertAdjacentElement('beforeend',toDoItem);
     }
 }
@@ -27,6 +28,8 @@ const del = Array.from(document.getElementsByClassName('deleteItem'));//as we ha
 //on all so converted to array
 for(let i=0; i <del.length; i++){
     del[i].addEventListener('click',(e)=>{
-        console.log(e.target)
+        const item = e.target.parentNode;
+        const parent = item.parentNode;
+        parent.indexOf();
     })
 }
