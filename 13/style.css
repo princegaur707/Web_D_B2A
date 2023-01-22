@@ -51,3 +51,8 @@ header{
     right:5px;
     cursor: pointer;
 }
+.editItem{
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+}
