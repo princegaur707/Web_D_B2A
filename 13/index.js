@@ -1,7 +1,6 @@
-const arr = [ ];
+const arr = [];
 const listEI = document.getElementsByClassName('list')[0];
-console.log(listEI);
-const submitinputE1= document.getElementById('submitinput')
+const submitInputE1= document.getElementById('submitInput')
 // console.log(listEI);
 const refreshList = function(){
     listEI.innerHTML=""; //for clearing all the element of earlier so that there is no
@@ -19,7 +18,7 @@ const refreshList = function(){
     //is deleted so we need to add again DeleteFunction to every element
 }
 
-submitinputE1.addEventListener('keyup', (e)=>{
+submitInputE1.addEventListener('keyup', (e)=>{
     // console.log(e.keyCode)  to know what is the key code of any key
     if(e.keyCode === 13){
         const val = e.target.value;//the text we typed will be stored in val
@@ -29,14 +28,15 @@ submitinputE1.addEventListener('keyup', (e)=>{
     }  
 })
 refreshList()
-const editTodo = function(item, toEdit){
+
+function editItem(toDoItem, toEdit){
     for(let i = 0; i < arr.length; i++){
         if(arr[i] === toDoItem){
-            console.log(toDoItem)
+            arr[i] = toEdit;
+            return;
         }
     }
 }
-
 function DeleteFunction(){
     const deleteItemEls = Array.from(document.getElementsByClassName('deleteItem'));//Array.from lets
     //to make the array from iterable objects to get every element with the help of for loop
@@ -49,20 +49,23 @@ function DeleteFunction(){
             const item = e.target.parentNode.innerText;
             const toDoItem = item.slice(0, -1).trim(); //I am getting cross sign so used slice to remove that
             // and trim is used to remove the space coming along with text 
-            arr.pop(arr.indexOf(toDoItem));
+            arr.splice(arr.indexOf(toDoItem), 1);
             refreshList();
         })
-        editItemEls.addEventListener('click', (e) =>{
+        editItemEls[i].addEventListener('click', (e) =>{
             const item = e.target.parentNode.innerText;
-            const toDoItem = item.slice(0, -3).trim();//cross sign, edit sign were coming with it
-            const val = submitinputE1.value;
+            console.log(item);
+            const toDoItem = item.slice(0, 1).trim();//cross sign, edit sign were coming with it
+            console.log(toDoItem)
+            const val = submitInputE1.value;
             if(val === "")
             {
                 alert("Enter the value in the input Box")
                 return;
             }
-            // editItemEls(toDoItem, val)
-            console.log(toDoItem,val);
+            editItem(toDoItem, val)
+            submitInputE1.value="";
+            refreshList()
         } )
     }
 }
