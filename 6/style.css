@@ -1,17 +1,18 @@
 /* 1) Making Variables */
-:root{    /* root is used to make variable */
+:root{    /* root is used to make variable: useful when we have some special property which we have to repeat multiple times  */
     --varone: rgb(13, 13, 29);     /* variable name then property */
 }
 .one{
     height: 500px;
     width: 1900px;
     background-color: var(--varone);
+    /* This is how we call it  */
 /* This leads to the distortion in size when the screen size changes(which is very common
 today as we see websites on various devices) so, to overcome this issue we use ranges
 for the different devices */
 }
 @media(min-width: 640px)
-/* @media (min-width: 640px) and (max-width: 767px) If need code to be merged */
+/* @media (min-width: 640px) and (max-width: 767px) If requires code to be merged */
 /* This condition changes width if screen width in more than 640px.
 640px is generally taken while sometimes it can be 480px*/
 {
@@ -21,7 +22,7 @@ for the different devices */
     }
 }
 
-@media (min-width: 768px)/* For the TAB screens and this values always remain same */
+@media (min-width: 768px)/* For the Tab screens this value always remain same */
 {
     .one
     {
@@ -56,14 +57,16 @@ for the different devices */
     height: 300px;
     background-color:green;
     float:right;
-    /* This box is assuming like red box do not exist when we moved it right we can see it 
-    occupied red box portion */
+    /* This box is assuming like red box do not exist when we moved it right we can see green box was
+    occupied by red box portion */
 }
 .four
 {
     width: 200px;
-    height: 400px;
+    height: 200px;
     background-color:blue;
+    /* Right now in this default position blue is being covered by red as blue box is neglecting red
+    box due to the float value */
     /* blue box will take 200px of red one also */
     clear: left; 
     /* properties: clear: left; right; both; default-none */
@@ -74,5 +77,5 @@ for the different devices */
     /* if we apply clear right it will start taking value from leaving area of green one also */
     float:left;
     /* if we do this float left without any clear then it will come to the side of red 
-    It will not overlap property consider this like div */
+    It will not overlap consider it like div */
 }
