@@ -2,10 +2,9 @@ p{
     font-size: 18px;
     /* font-size: 2cm; */
     /* font-size: 2em;    two times of what we have specified */
-    /* font-size: 3rem;   two times of browsers' specified */
-    /* Above are gen. used in smaking website responsive */
-    /* font-size: 10vw;  */
-    /* vw: entire viewable width
+    /* font-size: 3rem;   two times of browser's specified */
+    /* Above are gen. used in making website responsive */
+    /* font-size: 10vw;  vw: entire viewable width
     10%vw: 10 percent of viewable width */
     /* font-size: 10vh%; */
     /* vh: entire viewable height */
@@ -41,7 +40,7 @@ p{
     height:400px;
     background: linear-gradient(to right,violet, Indigo,blue,green,yellow,red);
 }
-/* Gradient: This is use for mixing the colors we cannot determine where colors are mixed */
+/* Gradient: This is use for mixing the colors in such a way that we cannot determine where colors are mixed */
 .four
 {
     margin-top:100px;
