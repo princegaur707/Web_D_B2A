@@ -1,11 +1,11 @@
-/*We should have used position also but that will be harder than this 
+/*We could have used position also but that will be harder than this 
 as we will be calculating the pixels everytime*/ 
 .whitebox{
     width:1000px;
     height:600px;
     background-color: white;
     border: 3px solid black;
-    display: flex;
+    display: flex; /*flex makes the container. Sets flexible length on flexible items and works only on first child and its siblings */
     justify-content: center;
     align-items: center;
     margin:auto;
@@ -15,9 +15,9 @@ as we will be calculating the pixels everytime*/
     width:960px;
     height:540px;
     background-image:linear-gradient(to bottom right, red, blue);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;             /* with flex only we can get align-items, justify-content etc */
+    justify-content: center;   /* horizontal aligning */
+    align-items: center;       /* vertical aligning */
 }
 .innerbox{
     width:600px;
@@ -28,21 +28,21 @@ as we will be calculating the pixels everytime*/
     align-items: center;
 }
 .navbar{
-    display: flex;
     width:500px;
-    height: 60px;
+    height: 60px; 
     background-color: white;
     display: flex;
     font-weight: 700;
     align-items: center;
-    justify-content:space-evenly;/*Equal space everywhere*/
+    justify-content:space-evenly;
+    /* ^ Equal space everywhere*/
     border-radius: 35px;
-}
-.fa-xmark{
-    background-color: black;
 }
 .a{
     font-weight: 500;
     color:red;
     font-size:xx-large;
+}
+.fa-xmark{
+    background-color: black;
 }

@@ -4,8 +4,9 @@ p{
     /* font-size: 2em;    two times of what we have specified */
     /* font-size: 3rem;   two times of browser's specified */
     /* Above are gen. used in making website responsive */
-    /* font-size: 10vw;  vw: entire viewable width
-    10%vw: 10 percent of viewable width */
+    /* font-size: 10vw;  */
+    /* vw: entire viewable width */
+    /* 10%vw: 10 percent of viewable width */
     /* font-size: 10vh%; */
     /* vh: entire viewable height */
     /* 10%vh: 10 percent of viewable height */   
@@ -27,10 +28,10 @@ p{
     /* hex value changes from 0 to 9 a - f hex value is useful if you are working in company
     and you need to add something of same color we will never know the name of that shade 
     so we will need to use hex value only */
-    /* HSL is not used much */
+    /* HSL (Hue-Saturation-Lightness) is not used much */
     background: linear-gradient(to right,red,blue); 
-    /* minimum two colors are required more than these can be entered
-    to right helps in setting direction */
+    /* minimum two colors are required more than two can be used
+    to right: helps in setting direction */
     background: linear-gradient(70deg,red 50%,green ,blue);
     /* 70 deg sets the direction */
 }
@@ -38,9 +39,9 @@ p{
     /* Rainbow */
     width:400px;
     height:400px;
-    background: linear-gradient(to right,violet, Indigo,blue,green,yellow,red);
+    background: linear-gradient(to right,violet, Indigo,blue,green,yellow,orange,red);
 }
-/* Gradient: This is use for mixing the colors in such a way that we cannot determine where colors are mixed */
+/* Gradient: This is used for mixing the colors in such a way that we cannot determine where colors are mixed */
 .four
 {
     margin-top:100px;
@@ -49,23 +50,23 @@ p{
     background:radial-gradient(circle,yellow 50%,aqua);
 }
 .five{
-    /* Sun: RED, Orange Yellow */
+    /* Sun: Red, Orange, Yellow */
     width: 300px;
     height:300px;
     background: radial-gradient(circle,red,orange,yellow);
 }
-/* transformations : give differenet shapes to container*/
+/* transformations : gives differenet shape to container*/
 .six{
     width: 200px;
     height:200px;
     background-color: red; 
     transform: skewX(30deg);    
-    transform: skewX(30deg);    
-    /* tilts the shape in specified direction skewX(required degree)*/
+    transform: skewY(30deg);    
+    /* tilts the shape in specified direction skewX(requires degree)*/
     transform: skewY(30deg);
     /* it goes into other box too due to tilting area */
     transform: skew(30deg,30deg);
-    
+                /*   X      Y */
 }
 .seven{
     background-color: green;
@@ -78,12 +79,13 @@ p{
     transform: scale(2,0.5);
     /* actually it remain same just visible only */
     /* scale is making size big or small */
-    transform: translate(50px,200px);/*overwriting other tranforms*/
+    transform: translate(50px,200px);/*overwriting other transforms*/
+    /* translate: repositions the element from its position */
     /* it will work like margin first one x and then y*/
     transform:scaleX(2) translate(100px,100px);/*If want to use multiple tranform values*/
     transform: rotate(45deg);
     /* Order : x and y opposite of margin and padding */
-    /* 3 D  we don't get to know if even if it applied with just eyes if we have to use
+    /* 3D  we don't get to know if even if it applied with just eyes if we have to use
     inspect to get to see how it is working but still it's working can be done with roateX
     and rotateY only*/
     /* transform:rotateX(30deg);
@@ -102,22 +104,22 @@ p{
     /* transition-timing-function:-
     ease-in: easy(slow) while starting
     ease-out: easy(slow) while ending
-    ease-in-out: slow at both start and end fast in middle(transiton)
+    ease-in-out: slow at both start and end fast in the middle(transiton)
     */
 }
 .eight:hover{
     background-color: yellow;
 }
+/*Animation: It is just like transition but there is no requirement of any activity like hovering to start animation*/
 .nine{
     width:300px;
     height:300px;
     background-color: #9e5099;
-    animation-name: animation1;
+    animation-name: animation1; /* we will have to give name to animation */
     position: relative;
-    /* we will have to give name to animation */
     animation-duration: 5s;
-    animation-delay:1s;
-    animation-iteration-count: 5;
+    animation-delay:2s;
+    animation-iteration-count: 2;
     animation-timing-function: linear;
 }
 @keyframes animation1{
@@ -155,9 +157,9 @@ p{
     position:relative;
     background-color: darkcyan;
     animation-name: animation2;
-    animation-duration: 5s;
-    animation-delay: 1s;
-    animation-iteration-count: 5;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-iteration-count: 3;
     animation-timing-function: linear;
 }
 @keyframes animation2{
@@ -169,7 +171,7 @@ p{
     }
     50%{
         left:90%;
-    }
+    }  
     75%{
         left:45%;
     }
@@ -184,20 +186,22 @@ p{
 }
 .container{
     background-color: aqua;
-    /* flex-direction: column;    will make the rows now */
-    /* flex-direction: row-reverse; this will make the last one come first and also row
-    will start from right */
-    /* flex-direction: column-reverse similarly it will start from bottom to top */
+    /* flex-direction: column;    */
+    /* above one will make the rows now */
+    /* flex-direction: row-reverse; */
+    /* this will make the last one come first and also row will start from right  */
+    /* flex-direction: column-reverse;  */
+    /* similarly it will start from bottom to top */
     justify-content: space-evenly;
     display:flex;
      
 }
 .demo{
-    background-color: black;   
+    background-color: rgb(218, 48, 48);   
     color:white;
     padding: 50px;
     margin-left:50px;
 }
-/* for icons-
-1) Font awesome 
+/* for using icons in website we need -
+1) Font awesome : for using font awesome we need cnd link
 2) cdnjs.com*/
