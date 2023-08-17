@@ -1,7 +1,11 @@
+
+//------------------------------------------------------------Class 10 Starting-------------------------------------------------------------------------------------------------
+
+
 // variable : data holding container 
 // data types : 
 
-// 1. number 
+// 1) number 
 
 var a= 20;
 var b= 40;
@@ -21,21 +25,20 @@ console.log(a);
 // let and const 
 
 let m = 20;
-// let m ='hello';cannot be redeclared
+// let m ='hello';let value cannot be redeclared
 m = 'hello';//can be reassigned only
 console.log(m);
 
 const n =20;
 // const n= 30;
-// n=30; const can neither be redeclared nor reassigned is possible 
+// n=30; const can neither be redeclared nor reassigned
 console.log(n);
 
 // operators ...
 
-// 1. arithematic operations 
-
-var a= 10;
-var b=10;
+console.log("------------1. Arithematic Operations---------");
+var a = 10;
+var b = 10;
 var z= 7;
 console.log(a+b);
 
@@ -44,7 +47,7 @@ var d = "hii";
 console.log(c+d);
 console.log(a+c);//directly concatenate such thing can only be done by java other than JS.
 console.log(c+a);
-console.log(c+a+b);
+console.log(c+a+b);//once we have string in pipeline later onees are added considering they are string
 console.log(a+b+c);//moves from left to right so, firstly addition is performed and once
 //it gets string in pipeline then numbers will be considered as string.
 
@@ -52,7 +55,7 @@ console.log(a-b);
 console.log(c-b);// NaN (Not a Number)
 
 console.log(a*b);
-console.log(c*b);
+console.log(c*b);//NaN 
 
 var y = (a/z);
 console.log(y);
@@ -62,14 +65,14 @@ console.log(y);
 console.log(a**b);
 a+=1;
 console.log(a++);
-console.log(a);
+console.log(a);//post increment result
 b-=1;
 b--;
 console.log(b)
 
 console.log(a%b);
 
-// Assignment operators 
+console.log("--------------2. Assignment Operators------------");
 // 1. = 
 // 2. +=
 // 3. -=
@@ -78,16 +81,16 @@ console.log(a%b);
 // 6. %=
 // 7. **=
 
-a%=b;
-a= a%b;
+a%=b;// a= a%b;
 console.log(a)
 
 
-// logical operators 
+console.log("-------------3. Logical operators---------------"); 
+
 // 1. and ( && )
 
 a= false
-b= false
+b= true
 console.log(a && b);
 
 // 2. or operator (||)
@@ -100,9 +103,9 @@ console.log(a || b);
 
 console.log(!a);
 
-// conditional operators 
+console.log("------------4. Conditional operators--------------"); 
 
-// 1. check( ==)
+// 1. check (==)
 //matches values only not type
 
 var a=97;
@@ -123,13 +126,13 @@ console.log(a===b);//matches both value and type
 
 console.log(a===b?'hello':'hii')
 
-// object 
+// 2) object - map, array, date (these all are object in JS)
 
 var  data1 = {name: "Tam" , age: 20}//map and it's type is object
 console.log(data1);
 //JS array: ordered collection of elements do not matter homo or hetrogeneous
 var  data2 = ['apple','bananna', 'kiwi'];
-console.log(data2)
+console.log(data2);
 
 var data3 = new Date();
 console.log(data3);
@@ -137,11 +140,12 @@ console.log(data3);
 console.log(typeof(a));
 console.log(typeof(data1));
 console.log(typeof(data2));
-console.log(typeof(data3));
+console.log(typeof(data3));//all 3 will come out to be object as they all are just types of object in JS
 
-// Strings 
+console.log("-------------Strings------------");
 
-var a = 'I Am A Softeware Engineer';
+var a = 'I Am A Software Engineer';
+var b = '123456789';
 console.log(a.length);
 
 console.log(a.toUpperCase());
@@ -172,7 +176,13 @@ var d = a.length;
 
 console.log(d);
 
-var e =a.slice(-6, -2);//last(-2) entry is not included
+
+var b = '123456789';
+console.log("checking ----->");
+console.log(b.slice(0, 3));//last one is not included 
+
+
+var e =a.slice(-6, -2);//last(-2) element is not included
 //if flow is Left to Right in slice it will give answers
 console.log(e);
 console.log(a.substring(-6,5));
@@ -182,14 +192,13 @@ console.log(a.substr(0,10));
 
 console.log(a.slice(0,0));
 console.log(a.slice(-10));//will print last 10 entries
-
 // console.log(a.reverse());
+
+console.log("-------Array Starting--------")
 
 var a =['a','b','c']
 console.log(a.reverse());
 
-console.log("-------Array Staring--------")
-// Arrays 
 var a =['a','b','c','d','e','f']
 console.log(a.length)
 
@@ -199,7 +208,7 @@ console.log(a)
 a.pop()
 console.log(a)
 
-a.shift()//removes first element
+a.shift()//removes element from first position
 console.log(a);
 
 a.unshift('t')//add element at the first position
@@ -212,11 +221,12 @@ console.log(a.slice(1,3));
 
 console.log(a);
 
-console.log(a.toString());
+console.log(a.toString());//comman will still be there to remove that join will used
 
+
+//-----------------------------------------------------------------------------------Missing Class---------------------------------------------------------------------------
 console.log('-------Function------------');
 
-// Function ... 
 
 function myFunction(a,b){
     return a*b;
@@ -231,16 +241,15 @@ function myFunction(a,b){
   
   console.log(myFunction(30,40))
 
-  console.log("--------Arrow Function----------")
-  // Arrow Functions 
+  console.log("--------Arrow Functions----------")
+
   
   var hello = (a,b) => { return a+b; }
   
   console.log(hello(10,20));
 
   console.log("--------If Else----------")
-  // if else 
-  
+ 
   var a ="hello2";
   
   if(a=='hello'){
@@ -258,7 +267,6 @@ function myFunction(a,b){
   }
 
   console.log("--------date----------")  
-  // date 
   
   var date = new Date()
   console.log(date);
@@ -386,7 +394,8 @@ function myFunction(a,b){
   
   abc.name
   abc.role
-  // Dom 
+  //----------------------------------------------------------------Session 11 ----------------------------------------------------------------------------------------
+  console.log("------------------DOM------------------------");
 
 // 1. by id 
 

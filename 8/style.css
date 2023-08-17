@@ -47,7 +47,7 @@ a{
     border-color:rgb(165, 47, 47);
     background-color: rgb(165, 47, 47);
 }
-.fa-bars{
+.fa-bars{/* class being used for 3 line of navigation icon */
     border:1px solid black;
     font-size:1rem;
     border-radius:5px;
@@ -68,7 +68,7 @@ h2{
     font-size:2rem;
     /* two times of html element(set by browser) */
     padding:2rem 0;
-    /* padding given top also implies bottom directly */
+    /* padding given to top also implies bottom directly */
     /* width: fit-content; */
 }
 .desc{
@@ -82,7 +82,7 @@ h2{
     background-color: rgb(41, 168, 79);
     border: 3px solid black;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: pointer; /*  replaced with hand when we hover over it */
     transition-duration: 2s;
 }
 .tablebook:hover{
@@ -124,11 +124,14 @@ footer{
     color:white;
 }
 .footcontent{
-    width: 100%;/*so that black background do not removed from corner on size change*/
+    width: 100%;/*so that black background do not get removed from corner on size change*/
     display:flex;
     align-items: center;
     justify-content: space-between;
     padding:2rem 2rem;
+}
+.footcontent a i {
+    color: white;
 }
 .myaddress{
     width: 50%;
